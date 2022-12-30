@@ -65,8 +65,7 @@ function chatStripe(isAi, value, uniqueId) {
 
 const handleSubmit = async (e) => {
     e.preventDefault()
-    remove.style.display = "none";
-
+    remove.style.display = "none";    
     const data = new FormData(form)
 
     // user's chatstripe
@@ -88,8 +87,7 @@ const handleSubmit = async (e) => {
     // messageDiv.innerHTML = "..."
     loader(messageDiv)
 
-    const response = await fetch('http://localhost:5000',
-     {
+    const response = await fetch('http://localhost:5000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
